@@ -33,3 +33,6 @@
 - 4. 在本地的working directory下运行： git remote add origin git@github.com:lilchu/PersonalNotes (远程库的名字就叫origin，这是git默认的叫法,使用这个命令不会遇到输入账号密码的问题，这是ssh登陆) 
 - 5. 将本地库的所有内容推送到远程库上： git push -u origin master(实际是将当前分支master推送到远程，由于远程库为空，第一次推送时加上了-u参数，git不仅会将本地的master分支推送到远程的master分支上，还会将二者关联起来，以后再推送和拉取时会简化命令)
 - 6. 可能会遇到（ failed to push some refs to ）问题，得先拉取使用git pull origin master 再上传 git push -u origin master
+
+### 克隆
+    - 先在github上创建一个远程库，然后使用 git clone git@github.com:lilchu/example,多人开发就各自克隆一份就行了。
