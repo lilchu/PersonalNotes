@@ -45,3 +45,6 @@
     - 3. git checkout master 会切换到master分支上，但是dev上的数据就不显示了
     - 4. 使用git merge dev 将dev分支上的数据合并到master上（git merge用于合并分支到当前分支，要注意当前分支是什么，默认和并方式为fast-forward）
     - 5. 使用git branch -d dev 删除分支
+
+### 解决冲突 分支管理策略 Bug分支 Feature分支 多人协作 Rebase 标签管理等详见
+- https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
