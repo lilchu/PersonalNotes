@@ -30,5 +30,6 @@
 - 1. 本地仓库与远程仓库之间是用ssh加密的，需要创建SSH KEY，看看用户主目录下有没有.ssh目录，再看看这个目录下有没有id_rsa,id_rsa.pub这两个文件，如果没有则打开shell（windows上是git bash），创建ssh key: ssh-keygen -t rsa -C "lilzhuchunwu@gmail.com" (无需设置密码，一路回车)  （ssh存储位置在/c/Users/zhuchunwu/.ssh/id_rsa）
 - 2. 登录github， 打开Account settings - SSH keys 页面，点击Add SSH KEY, 填上Title，在文本框里粘贴 id_rsa.pub文件的内容
 - 3. github上create new repository "PersonalNotes"
-- 4. 在本地的working directory下运行： git remote add origin git@github.com:lilchu/PersonalNotes (远程库的名字就叫origin，这是git默认的叫法)
+- 4. 在本地的working directory下运行： git remote add origin git@github.com:lilchu/PersonalNotes (远程库的名字就叫origin，这是git默认的叫法,使用这个命令不会遇到输入账号密码的问题，这是ssh登陆) 
 - 5. 将本地库的所有内容推送到远程库上： git push -u origin master(实际是将当前分支master推送到远程，由于远程库为空，第一次推送时加上了-u参数，git不仅会将本地的master分支推送到远程的master分支上，还会将二者关联起来，以后再推送和拉取时会简化命令)
+- 6. 可能会遇到（ failed to push some refs to ）问题，得先拉取使用git pull origin master 再上传 git push -u origin master
